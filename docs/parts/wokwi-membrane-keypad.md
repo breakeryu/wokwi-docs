@@ -69,7 +69,9 @@ void loop() {
 }
 ```
 
-You can also [try this example on Wokwi](https://wokwi.com/projects/294980637632233994).
+You can also [try this example on Wokwi](https://wokwi.com/projects/294980637632233994). 
+
+**Tip**: You can use keyboard shortcuts to activate the buttons on the keypad. Click on the keypad once (now the keypad is in focus), and you can press 0...9/A/B/C/D/#/* in the keyboard to activate the corresponding key.
 
 ### Examples
 
@@ -83,4 +85,4 @@ You can also [try this example on Wokwi](https://wokwi.com/projects/294980637632
 
 - [Basic Keypad example](https://wokwi.com/projects/294980637632233994)
 - [Arduino Calculator](https://wokwi.com/projects/276825819240727048)
-- [Electronic Safe](https://wokwi.com/arduino/libraries/demo/electronic-safe)
+- [Electronic Safe](https://wokwi.com/projects/344891391763022419)

@@ -32,6 +32,18 @@ Create a new copy of a part by clicking on it (to select it) and the pressing "D
 
 Delete a part by clicking on it (to select it) and then pressing the Delete button.
 
+### Selecting multiple parts
+
+Select multiple parts by clicking on the parts with the Shift key pressed. You can then move all the parts together, duplicate them (using the "D" key), or delete them using the Delete key.
+
+### Copying and pasting parts
+
+You can copy the selects part(s) by using the standard Copy keyboard shortcut (Ctrl+C or ⌘+C). If you selected multiple parts, all the wires that connect the selected parts are also copied. The parts you copied are stored in your system clipboard in a JSON format, similar to the [diagram.json format](../diagram-format).
+
+To paste the parts you copied, click on the diagram and press the standard Paste keyboard (Ctrl+V or ⌘+V). In some cases, the parts will be pasted outside of the currently visible diagram area, so you may have to zoom out in order to find them. This will be fixed in the future.
+
+You can use the copy-paste feature between different project, and quickly copy several parts (including all the internal connections) at once.
+
 ## Editing wires
 
 ### Creating a wire between two parts
@@ -90,19 +102,12 @@ The following table summarizes the keyboard shortcuts:
 | Shift  | Toggle coarse grid snapping while dragging |
 | Alt    | Toggle fine grid snapping while dragging   |
 | Ctrl   | Toggle fine grid snapping while dragging   |
+| Ctrl+Z | Undo \*                                    |
+| Ctrl+Y | Redo \*                                    |
+
+\* On Mac, use ⌘ instead of Ctrl
 
 Firefox users: if the keyboard shortcuts don't work for you, please make sure that the "Search for text when you start typing" setting is disabled.
-
-## Undo / Redo
-
-Any change that you make in the interactive editor is also reflected in [diagram.json](../diagram-format).
-
-The interactive editor **does not** have an undo feature at the moment (there's an [open issue for that](https://github.com/wokwi/wokwi-features/issues/77)).
-
-You can still get complete Undo history if you select the "diagram.json" tab in the code editor. Any changes made in the interactive diagram editor
-will immediately reflect in the code editor, and you'll be able to undo them by clicking on the code editor and then pressing Ctrl+Z.
-
-Note that this only works if the "diagram.json" tab is active while you make changes. This is a temporary solution until we implement Undo in the interactive diagram editor.
 
 ## Grid snapping
 

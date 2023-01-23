@@ -28,9 +28,7 @@ Display de LED 7 segmentos
 
 \* COM é o pino comum para um display de 7 segmentos de um único dígito. Para um display de vários dígitos, use DIG1…DIG4.
 
-Por padrão, os pinos do segmento (A…G, DP, CLN) são conectados ao ânodo (lado positivo) dos LEDS, e o
-pinos comuns (COM, DIG1…DIG4) são conectados ao cátodo (lado negativo) dos LEDs. Você pode definir o "comum"
-atribuído ao "cátodo" para reverter esse comportamento.
+Com a configuração padrão do atributo `common` como `anode`, os pinos de segmento (A…G, DP, CLN) são conectados ao cátodo (lado negativo) dos LEDS, e os pinos comuns (COM, DIG1…DIG4) são conectado ao ânodo (lado positivo) dos LEDs. Os segmentos são iluminados ao direcionar seus pinos para o nível baixo. Definir `common` como `cathode` reverte esse comportamento, com os pinos do segmento ligando quando em nível alto.
 
 O mapeamento do segmento é o seguinte:
 
@@ -67,16 +65,16 @@ e o pino comum deve ser conectado a 5V (ou GND se você estiver usando a variant
 Para vários dígitos, você precisará de 8 pinos de microcontrolador para os segmentos e mais um pino extra do microcontrolador para cada dígito e o ponto. Portanto, se você tiver 4 dígitos, precisará de 12 pinos do microcontrolador no total. Controlar a exibição neste modo é um pouco complicado, pois você precisará alternar continuamente entre os diferentes dígitos.
 Felizmente, existem bibliotecas que podem ajudar:
 
-- No Arduino: use a biblioteca [SevSeg](https://wokwi.com/arduino/libraries/SevSeg).
+- No Arduino: use a biblioteca [SevSeg](https://wokwi.com/projects/344891439152366164).
 - No Raspberry Pi Pico: O periférico PIO pode cuidar de atualizar o display para você. Veja os [exemplos abaixo](#exemplos-no-simulador).
 
 Se você estiver sem pinos do microcontrolador, considere o uso de um [74HC595 Shift Register](wokwi-74hc595) para controlar o display.
 
 ## Exemplos no simulador
 
-- [Exemplo SevSeg: Contador](https://wokwi.com/arduino/libraries/SevSeg/SevSeg_Counter)
-- [Exemplo SevSeg: String com ponto](https://wokwi.com/arduino/libraries/SevSeg/stringWithPeriod)
-- [Despertador Arduino](https://wokwi.com/playground/alarm-clock)
+- [Exemplo SevSeg: Contador](https://wokwi.com/projects/344891439152366164)
+- [Exemplo SevSeg: String com ponto](https://wokwi.com/projects/344893935754150484)
+- [Despertador Arduino](https://wokwi.com/projects/297787059514376717)
 - [Relógio de 7 segmentos ATtiny85](https://wokwi.com/projects/301366580039647753)
 - [Contador ATtiny85 de 8 dígitos](https://wokwi.com/projects/301304715310793225)
 - [7-Segmento no Raspberry Pi Pico (usando PIO)](https://wokwi.com/projects/301404853501952521)

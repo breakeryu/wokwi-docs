@@ -32,6 +32,18 @@ Crie uma nova cópia de uma peça clicando nela (para selecioná-la) e pressiona
 
 Exclua uma peça clicando nela (para selecioná-la) e em seguida pressionando a tecla Delete.
 
+### Selecionando várias peças
+
+Selecione várias peças clicando nas peças com a tecla Shift pressionada. Você pode então mover todas as partes juntas, duplicá-las (usando a tecla "D") ou excluí-las usando a tecla Delete.
+
+### Copiando e colando peças
+
+Você pode copiar a(s) parte(s) selecionada(s) usando o atalho de teclado padrão Copiar (Ctrl+C ou ⌘+C). Se você selecionou várias peças, todos os fios que conectam as peças selecionadas também são copiados. As partes que você copiou são armazenadas na área de transferência do sistema em um formato JSON, semelhante ao [diagram.json](../diagram-format).
+
+Para colar as partes que você copiou, clique no diagrama e pressione o teclado padrão Colar (Ctrl+V ou ⌘+V). Em alguns casos, as peças serão coladas fora da área do diagrama atualmente visível, portanto, talvez seja necessário diminuir o zoom para encontrá-las. Isso será corrigido no futuro.
+
+Você pode usar o recurso copiar e colar entre diferentes projetos e copiar rapidamente várias partes (incluindo todas as conexões internas) de uma só vez.
+
 ## Editando fios
 
 ### Criação de uma ligação entre as duas peças
@@ -90,19 +102,12 @@ A tabela a seguir resume os atalhos do teclado:
 | Shift  | Alterna ajuste grosso da grade ao arrastar   |
 | Alt    | Alterna ajuste fino da grade ao arrastar     |
 | Ctrl   | Alterna ajuste fino da grade ao arrastar     |
+| Ctrl+Z | Desfazer \*                                  |
+| Ctrl+Y | Refazer \*                                   |
 
-Usuários do Firefox: se os atalhos do teclado não funcionarem, certifique-se de que a configuração "Pesquisar texto ao começar a digitar" esteja desabilitada.
+\* No Mac, use ⌘ em vez de Ctrl
 
-## Desfazer / Refazer
-
-Qualquer mudança que você fizer no editor interativo também se refletirá em [diagram.json](../diagram-format).
-
-O editor interativo **não tem** o recurso de desfazer no momento (há uma [solicitação aberta para isso](https://github.com/wokwi/wokwi-features/issues/77)).
-
-Você ainda pode obter o histórico completo de Desfazer se selecionar a guia "diagram.json" no editor de código. Quaisquer alterações feitas no editor de diagramas interativo
-refletirá imediatamente no editor de código e você poderá desfazê-los clicando no editor de código e pressionando Ctrl+Z.
-
-Observe que isso só funciona se a guia "diagram.json" estiver ativa enquanto você faz alterações. Esta é uma solução temporária até implementarmos o Desfazer no editor de diagramas interativo.
+Usuários do Firefox: se os atalhos de teclado não funcionarem para você, certifique-se de que a configuração "Pesquisar texto ao começar a digitar" esteja desativada.
 
 ## Grade de encaixe
 

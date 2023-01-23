@@ -10,7 +10,7 @@ module.exports = {
   projectName: 'wokwi-docs',
   scripts: [
     {
-      src: 'https://unpkg.com/@wokwi/elements@0.57.2/dist/wokwi-elements.bundle.js',
+      src: 'https://unpkg.com/@wokwi/elements@1.2.2/dist/wokwi-elements.bundle.js',
       async: true,
     },
   ],
@@ -124,7 +124,7 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'pt-BR'],
+    locales: ['en', 'pt-BR', 'zh-CN'],
     localeConfigs: {
       en: {
         label: 'English',

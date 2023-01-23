@@ -23,8 +23,7 @@ Some use cases include:
 
 The Wokwi Logic Analyzer has 8 digital channels, called D0 to D7. It has a sample rate of 1GHz, which should be more than enough for most applications.
 
-Each channel has an activity LED that turns green whenever there is an activity on the channel. The activity LEDs provide an easy way to see that the signals are connected
-correctly.
+Each channel has an activity LED that turns green whenever there is an activity on the channel. The activity LEDs provide an easy way to see that the signals are connected correctly.
 
 The logic analyzer has a small display. It shows the number of samples captured since the simulation started.
 
@@ -54,9 +53,25 @@ Here are some examples for common use cases:
 
 Use the `triggerPin` and `triggerLevel` attributes to configure the trigger pin and set the trigger level ("high" or "low"). Check out the [wokwi-logic-analyzer documentation](../parts/wokwi-logic-analyzer) for more information.
 
+### Customizing the Channel Names
+
+By default, the channel names are D0, D1, D2, etc. You can customize the channel names by setting the `channelNames` attribute. For example, to name the channels "SCL", "SDA", "RST", add the following attribute to the logic analyzer:
+
+```json
+  { 
+    "type": "wokwi-logic-analyzer", 
+    "id": "logic1",
+    "attrs": {
+      "channelNames": "SCL,SDA,RST"
+    }
+  }
+```
+
+The channel names only affect the VCD file output. The input pins of the logic analyzer are called D0, D1, etc., regardless of the `channelNames` attribute.
+
 ### Viewing the data in PulseView
 
-PulseView an open source Logic Analyzer GUI. It runs on Linux, Windows, Mac OS X, and there's even an Android version. You can visit their [downloads page](https://sigrok.org/wiki/Downloads) to get the latest version.
+PulseView an open source Logic Analyzer GUI. It runs on Linux, Windows, Mac OS X, and there's even an Android version. You can visit their [downloads page](https://sigrok.org/wiki/Downloads) to get the latest version. For ARM Mac (M1/M2) users, please follow the [PulseView on Mac M1/M2 guide](https://nishtahir.com/running-pulseview-on-an-m1-mac/).
 
 Load the recorded signal (VCD) file by clicking on the small arrow next to the "Open" button, and choosing: "Import Value Change Dump data..."
 
